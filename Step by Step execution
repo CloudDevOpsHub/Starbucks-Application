@@ -1,0 +1,76 @@
+sudo apt update
+sudo apt install fontconfig openjdk-21-jre
+java -version
+
+
+sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key
+echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt update
+sudo apt install jenkins
+
+
+
+Repo -- https://github.com/CloudDevOpsHub/Starbucks-Application
+git clone https://github.com/CloudDevOpsHub/Starbucks-Application.git
+
+
+Plugins---
+• Eclipse Temurin Installer
+
+• NodeJS
+
+• Docker
+
+• Docker Commons
+
+• Docker Pipeline,
+
+• Docker API
+
+• docker-build-step
+
+• Pipeline stage view
+
+
+Configure docker hub with Jenkins
+
+Manage Jenkins 🡪credentials
+
+🡪click on global
+
+
+ 🡪add credentials
+
+ 🡪kind- username with password 
+ 
+ 🡪username-dockerhub username 🡪password – docker hub password🡪
+ID- docker 🡪
+description -docker🡪
+create
+
+================================================
+Go to manage Jenkins 🡪 tools and configure tools
+1-Java installation
+Add jdk 🡪
+name – jdk17
+🡪click on install automatically ->add installer🡪select install form adoptiam.net🡪verison java17.0.8.1+1
+2- nodejs installation
+Add nodejs🡪
+name – node16🡪 install automatically 🡪version nodejs 16.20.0
+3- docker installation
+Add docker 🡪
+name – docker
+🡪install automatically 🡪add installer 🡪download from docker.com🡪
+Click on apply & save it
+
+=======================================
+
+https://github.com/CloudDevOpsHub/Starbucks-Application.git
+
+
+
+CD repo---
+https://github.com/CloudDevOpsHub/Starbucks-Application/blob/main/CD
