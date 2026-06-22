@@ -20,7 +20,7 @@ pipeline {
 
                     // Run latest container
                     sh """
-                    docker run -d --name starbucks -p 3000:3000 vikas4cloud/starbucks:latest
+                    docker run -d --name starbucks -p 3000:3000 saicloud28/starbucks:latest
                     """
                 }
             }
