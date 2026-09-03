@@ -12,7 +12,7 @@ pipeline {
         }
         stage ("Git Checkout") {
             steps {
-                git branch: 'main', url: 'https://github.com/CloudDevOpsHub/Starbucks-Application.git'
+                git branch: 'main', url: 'https://github.com/Abu22793/Starbucks-Application.git'
             }
         }
         stage("Install NPM Dependencies") {
@@ -28,9 +28,9 @@ pipeline {
         stage("Tag & Push to DockerHub") {
             steps {
                 script {
-                    withDockerRegistry(credentialsId: 'docker') {
-                        sh "docker tag starbucks vikas4cloud/starbucks:latest"
-                        sh "docker push vikas4cloud/starbucks:latest"
+                    withDockerRegistry(credentialsId: 'Bravefolk@7890') {
+                        sh "docker tag starbucks chander391/starbucks:latest"
+                        sh "docker push chander391/starbucks:latest"
                     }
                 }
             }
